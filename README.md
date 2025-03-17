@@ -1,11 +1,7 @@
 # faculPyton
  
-Claro! O código que você forneceu cria uma estrutura com bordas, mas há um pequeno detalhe que pode ser ajustado.
 
-Aqui está o código corrigido em português:
 
-python
-Copiar
 print('+' + 10 * '-' + '+')  # Borda superior
 print(("|" + " " * 10 + "|\n") * 5, end="")  # Linhas verticais com 10 espaços
 print('+' + 10 * '-' + '+')  # Borda inferior
@@ -25,10 +21,6 @@ Copiar
 +----------+
 Isso cria uma caixa retangular com bordas e 10 espaços dentro de cada linha.
 
-Você disse:
-faca outras formas
-O ChatGPT disse:
-Claro! Vou criar alguns exemplos de diferentes formas usando o código em Python para gerar caixas e outras figuras. Aqui estão algumas variações:
 
 1. Caixa com borda dupla:
 python
