@@ -496,3 +496,43 @@ print(s[1:3])
 s = "Olá Mundo!"
 
 print(s[:3])
+
+# 📌 Explicação do Código
+# O código usa fatiamento de strings ([:end]) para extrair uma parte da string s = "Olá Mundo!".
+
+# 🛠️ Código e Saída
+# python
+# Copiar
+# Editar
+# s = "Olá Mundo!"
+
+# print(s[:3])  # Saída: Olá
+# 📌 Entendendo o Fatiamento [:end]
+# A sintaxe do fatiamento é:
+
+# python
+# Copiar
+# Editar
+# string[início:fim]
+# início (opcional) → Se omitido, assume 0 (início da string).
+# fim → Índice final (exclusivo, ou seja, não inclui esse índice).
+# 🔹 No exemplo:
+
+# python
+# Copiar
+# Editar
+# s[:3]
+# Como não há valor antes dos dois-pontos (:), o Python assume início = 0.
+# Vai até antes do índice 3, ou seja, pega os caracteres de 0 a 2.
+# 📌 A string original com os índices:
+
+# mathematica
+# Copiar
+# Editar
+#   0   1   2   3   4   5   6   7   8   9  10  
+#   O   l   á       M   u   n   d   o   !  
+# 🔹 O trecho extraído é "Olá".
+
+# 🚀 Resumo
+# Código	Saída	Explicação
+# s[:3]	"Olá"	Pega do início (0) até antes do índice 3.
