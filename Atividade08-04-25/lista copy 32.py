@@ -1,0 +1,1 @@
+Crie uma lista e ordene-a em ordem crescente com .sort().
