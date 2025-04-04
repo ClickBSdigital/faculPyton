@@ -1,0 +1,32 @@
+int numero1 = 0;
+int numero2 = 0;
+int resultado = 0;
+bool recebeuPrimeiroNumero = false;
+
+void setup() {
+  Serial.begin(9600);  // Inicia a comunicação serial
+  Serial.println("Digite o primeiro número:");
+}
+
+void loop() {
+  if (Serial.available() > 0) { 
+    String entrada = Serial.readStringUntil('\n'); 
+    entrada.trim(); // Remove espaços extras
+
+    if (!recebeuPrimeiroNumero) {
+      numero1 = entrada.toInt(); // Converte para inteiro
+      recebeuPrimeiroNumero = true;
+      Serial.println("Digite o segundo número:");
+    } else {
+      numero2 = entrada.toInt();
+      resultado = numero1 + numero2; // Realiza a soma
+
+      Serial.print("A soma é: ");
+      Serial.println(resultado);
+
+      // Reiniciar o processo
+      recebeuPrimeiroNumero = false;
+      Serial.println("Digite o primeiro número:");
+    }
+  }
+}
