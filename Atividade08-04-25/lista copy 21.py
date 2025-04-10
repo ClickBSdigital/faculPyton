@@ -1,1 +1,4 @@
-Crie uma lista e utilize min() para encontrar o menor valor.
+# 21. Menor valor da lista
+lista21 = [8, 2, 7, 4, 9]
+print(min(lista21))
+

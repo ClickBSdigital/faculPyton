@@ -1,1 +1,5 @@
-Crie uma lista de palavras e utilize .join() para transformá-la em uma string.
+# 61. .join() para transformar em string
+palavras61 = ["Python", "é", "top"]
+frase61 = " ".join(palavras61)
+print(frase61)
+

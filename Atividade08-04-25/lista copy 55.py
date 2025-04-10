@@ -1,1 +1,5 @@
-Crie uma lista e substitua seus elementos por seus valores absolutos com abs().
+# 55. Substituir por valores absolutos
+lista55 = [-10, 5, -3, 7]
+lista55 = [abs(x) for x in lista55]
+print(lista55)
+

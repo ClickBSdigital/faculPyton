@@ -1,1 +1,5 @@
-Crie uma lista de números e utilize sorted(reverse=True) para ordená-la ao contrário.
+# 49. Ordenar ao contrário sem modificar original
+lista49 = [7, 2, 9, 1]
+inversa = sorted(lista49, reverse=True)
+print(inversa)
+

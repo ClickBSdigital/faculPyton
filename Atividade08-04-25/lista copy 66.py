@@ -1,1 +1,5 @@
-Crie uma lista de palavras e utilize .replace() para trocar uma letra específica em cada palavra.
+# 66. Trocar uma letra específica em cada palavra
+palavras66 = ["casa", "carro", "cadeira"]
+palavras66 = [p.replace("c", "k") for p in palavras66]
+print(palavras66)
+
