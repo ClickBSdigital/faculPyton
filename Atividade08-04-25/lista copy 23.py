@@ -1,1 +1,5 @@
-Crie uma lista com 4 elementos e altere o valor do primeiro elemento.
+# 23. Alterar valor do primeiro elemento
+lista23 = [10, 20, 30, 40]
+lista23[0] = 99
+print(lista23)
+

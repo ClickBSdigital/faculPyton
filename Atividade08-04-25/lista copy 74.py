@@ -1,1 +1,5 @@
-Crie uma lista de palavras e remova todas que tenham menos de 4 letras.
+# 74. Remover palavras com mais de 6 letras
+palavras74 = ["banana", "uva", "melancia", "kiwi"]
+palavras74 = [p for p in palavras74 if len(p) <= 6]
+print(palavras74)
+

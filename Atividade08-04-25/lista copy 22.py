@@ -1,2 +1,5 @@
-Crie uma lista com 5 elementos e altere o valor do terceiro elemento.
+# 22. Alterar valor do terceiro elemento
+lista22 = [1, 2, 3, 4, 5]
+lista22[2] = 99
+print(lista22)
 

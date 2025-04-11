@@ -1,1 +1,5 @@
-Crie uma lista de números e calcule sua média com sum(lista) / len(lista).
+# 45. Calcular média
+lista45 = [10, 20, 30, 40]
+media = sum(lista45) / len(lista45)
+print(media)
+

@@ -1,1 +1,5 @@
-Crie uma lista com 5 elementos e remova o último elemento com .pop().
+# 26. Remover último elemento com .pop()
+lista26 = [5, 10, 15, 20, 25]
+lista26.pop()
+print(lista26)
+
