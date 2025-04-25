@@ -23,10 +23,14 @@
     }
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 0 50px;
+      background-image: url('SpamShield.png'); 
+      background-position: center;
+      background-size: 90%;
+      width: 100%;
     }
     .logo {
-      max-width: 180px;
+      max-width: 350px;
       margin-bottom: 20px;
     }
     section {
@@ -43,26 +47,50 @@
       background-color: #001f3f;
       padding: 20px;
     }
+    .datepicker{
+      cursor: pointer;
+   }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">SpamShield</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
         </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
-
-  <header>
+  <header class="heder_back">
     <img src="logo.png" alt="Logo SpamShield" class="logo">
     <h1>SpamShield</h1>
     <p>Seu escudo contra chamadas e mensagens indesejadas</p>
@@ -72,7 +100,7 @@
     <div class="container">
       <h2 class="text-center mb-5">Pitch Deck Acadêmico — Projeto: SpamShield</h2>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 2 – O Problema</h4>
         <p>Milhões de pessoas recebem diariamente chamadas e mensagens indesejadas (spam).</p>
         <ul>
@@ -90,8 +118,8 @@
             <!-- Card Template -->
             <!-- Repita este card para cada slide, mudando os dados -->
             <!-- Slide 1 -->
-            <div class="col">
-              <div class="card h-100 text-white bg-primary" data-bs-toggle="modal" data-bs-target="#slide1">
+            <div class="col datepicker">
+              <div class="card h-100 text-white bg-primary " data-bs-toggle="modal" data-bs-target="#slide1">
                 <div class="card-body">
                   <h5 class="card-title">Slide 1 - Capa</h5>
                   <p class="card-text">SpamShield - Seu escudo contra chamadas e mensagens indesejadas.</p>
@@ -100,7 +128,7 @@
             </div>
       
             <!-- Slide 2 -->
-            <div class="col">
+            <div class="col datepicker">
               <div class="card h-100 text-white bg-primary" data-bs-toggle="modal" data-bs-target="#slide2">
                 <div class="card-body">
                   <h5 class="card-title">Slide 2 - O Problema</h5>
@@ -118,12 +146,12 @@
       </section>
       
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 3 – A Solução</h4>
         <p>SpamShield é uma plataforma inteligente que detecta e bloqueia automaticamente chamadas e mensagens de spam, proporcionando segurança, privacidade e relatórios personalizados.</p>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 4 – Produto / Serviço</h4>
         <ul>
           <li>Aplicativo mobile para Android e iOS</li>
@@ -133,12 +161,12 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 5 – Público-Alvo</h4>
         <p>Usuários individuais e empresas impactadas por spam. Necessidades: aumento de produtividade, proteção de dados e uso do celular com tranquilidade.</p>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 6 – Modelo de Negócios</h4>
         <ul>
           <li>Assinatura mensal ou anual</li>
@@ -148,7 +176,7 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 7 – Vantagens Competitivas</h4>
         <ul>
           <li>IA própria de detecção</li>
@@ -158,7 +186,7 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 8 – Modelo de Trabalho</h4>
         <ul>
           <li>Equipe híbrida (remoto + presencial)</li>
@@ -167,12 +195,12 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 9 – A Equipe</h4>
         <p>Desenvolvedores, especialistas em segurança e profissionais de marketing e vendas com perfil inovador e experiência em startups.</p>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 10 – Recursos Necessários</h4>
         <ul>
           <li>Investimento inicial: R$ 500.000,00</li>
@@ -181,7 +209,7 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 11 – Roadmap Inicial</h4>
         <ul>
           <li>MVP: 0-3 meses</li>
@@ -191,7 +219,7 @@
         </ul>
       </div>
 
-      <div class="card p-4">
+      <div class="card p-4 text-white">
         <h4>Slide 12 – Encerramento</h4>
         <p>SpamShield — Seu escudo contra chamadas e mensagens indesejadas. Invista em produtividade, segurança e tranquilidade.</p>
         <p>[Contato / Website / QR Code]</p>
@@ -223,7 +251,8 @@
   <!-- Modal Slide 1 -->
 <div class="modal fade" id="slide1" tabindex="-1" aria-labelledby="slide1Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
+    <div class="modal-content bg-primary text-pink">
+      <img class="rounded float-left" src="SpamShield (2).png" alt="">
       <div class="modal-header">
         <h5 class="modal-title" id="slide1Label">Slide 1 – Capa</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
@@ -240,7 +269,8 @@
 <!-- Modal Slide 2 -->
 <div class="modal fade" id="slide2" tabindex="-1" aria-labelledby="slide2Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
+    <div class="modal-content bg-primary text-pink">
+      <img class="rounded float-left" src="SpamShield (2).png" alt="">
       <div class="modal-header">
         <h5 class="modal-title" id="slide2Label">Slide 2 – O Problema</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
