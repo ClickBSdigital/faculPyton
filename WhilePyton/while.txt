@@ -1,0 +1,75 @@
+Vamos falar sobre o while em Python com exemplos em português. 😊
+
+O que é o while?
+O while é um loop (repetição) que executa um bloco de código enquanto uma condição for 
+verdadeira.
+
+Sintaxe Básica:
+
+while condição:
+    # Código que repete enquanto a condição for True
+
+Exemplo 1: Contagem Simples
+
+contador = 0
+while contador < 5:
+    print(f"Contagem: {contador}")
+    contador += 1  # Incrementa para evitar loop infinito
+Saída:
+
+Contagem: 0  
+Contagem: 1  
+Contagem: 2  
+Contagem: 3  
+Contagem: 4  
+
+Exemplo 2: Loop até o Usuário Sair
+
+resposta = ""
+while resposta != "sair":
+    resposta = input("Digite 'sair' para encerrar: ").lower()
+    print("Você digitou:", resposta)
+print("Fim do programa!")
+
+
+Funcionamento:
+
+O loop só para quando o usuário digitar "sair".
+
+Exemplo 3: break e continue
+break → interrompe o loop.
+
+continue → pula para a próxima iteração.
+
+
+numero = 0
+while numero < 10:
+    numero += 1
+    if numero == 3:
+        continue  # Pula o número 3
+    if numero == 8:
+        break     # Para no número 8
+    print(numero)
+
+Saída:
+
+1  
+2  
+4  
+5  
+6  
+7  
+
+Cuidado com Loop Infinito!
+Se a condição nunca virar False, o loop nunca termina. Exemplo perigoso:
+
+
+while True:
+    print("Isso vai rodar para sempre! 😱")
+(Para parar, use Ctrl + C no terminal.)
+
+Quando usar while?
+Quando você não sabe quantas vezes o código deve repetir (ex.: esperando uma entrada 
+do usuário).
+
+Para processos contínuos até uma condição ser atendida.
