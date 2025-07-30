@@ -1,0 +1,139 @@
+Vamos entender como funciona todo o sistema “Construção Fácil” em Python, baseado em arquivos .txt como banco de dados, com um menu principal e CRUD completo para:
+
+Produtos
+
+Clientes
+
+Orçamentos
+
+FUNCIONALIDADE GERAL DO SISTEMA
+O sistema é totalmente em terminal (modo texto) e organiza os dados em arquivos .txt. Ele simula um pequeno ERP para loja de materiais de construção, sem precisar de banco de dados SQL.
+
+1. MENU PRINCIPAL – main.py
+Ao rodar o sistema, você verá:
+
+csharp
+Copiar
+Editar
+========= Construção Fácil =========
+[1] Gerenciar Produtos
+[2] Gerenciar Clientes
+[3] Gerar Orçamento
+[0] Sair
+Cada opção chama um módulo diferente (produto, cliente ou orçamento).
+
+2. PRODUTOS – produtos.py
+Funciona assim:
+
+csharp
+Copiar
+Editar
+[1] Cadastrar produto
+[2] Listar produtos
+[3] Atualizar produto
+[4] Remover produto
+[0] Voltar
+
+O que é salvo:
+ID do produto
+
+Nome
+
+Quantidade
+
+Preço
+
+Exemplo de linha em produtos.txt:
+Copiar
+Editar
+1;Cimento Votoran;50;39.90
+
+3. CLIENTES – clientes.py
+Funciona com as mesmas opções de CRUD:
+
+csharp
+Copiar
+Editar
+[1] Cadastrar cliente
+[2] Listar clientes
+[3] Atualizar cliente
+[4] Remover cliente
+[0] Voltar
+
+O que é salvo:
+ID
+
+Nome completo
+
+Telefone
+
+CPF
+
+Exemplo de linha em clientes.txt:
+Copiar
+Editar
+1;João da Silva;67999887766;12345678900
+
+4. ORÇAMENTO – orcamentos.py
+Aqui, você seleciona:
+
+Um cliente (pelo ID)
+
+Adiciona um ou mais produtos com quantidade
+
+O sistema calcula o total
+
+Gera uma linha no arquivo orcamentos.txt
+
+Exemplo de orçamento:
+mathematica
+Copiar
+Editar
+Orçamento #1 | Cliente: João da Silva | Produtos: Cimento (2x), Areia (1x) | Total: R$ 139.70
+
+COMO FUNCIONA O CRUD COM .txt
+
+Cadastrar:
+Lê os dados via input()
+
+Gera um ID (com base na última linha do arquivo)
+
+Salva os dados em formato separado por ;
+
+Listar:
+Abre o arquivo .txt
+
+Lê e mostra todos os registros formatados no terminal
+
+Atualizar:
+Lê o arquivo todo
+
+Substitui a linha com o ID correspondente
+
+Reescreve o arquivo inteiro
+
+Remover:
+Lê tudo
+
+Remove a linha do ID correspondente
+
+Salva novamente
+
+LÓGICA SIMPLES, FUNCIONALIDADE EFICIENTE
+Esse sistema é ideal para:
+
+Aprender lógica de programação com arquivos
+
+Criar um projeto prático para portfólio
+
+Automatizar pequenos cadastros de clientes ou estoque
+
+TECNOLOGIAS USADAS
+Python 3
+
+Editor de texto (VSCode, Sublime, Notepad++)
+
+Terminal ou Prompt de Comando
+
+Arquivos .txt como armazenamento
+
