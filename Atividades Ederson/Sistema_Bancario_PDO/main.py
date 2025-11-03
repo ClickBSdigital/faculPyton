@@ -21,7 +21,7 @@ def cadastrar_conta(banco):
     limpar_tela()
     print("=== CADASTRO DE CONTA ===")
     
-    nome = input("Nome do titular: ")
+
     agencia = input("Agência: ")
     senha = input("Senha: ")
     
