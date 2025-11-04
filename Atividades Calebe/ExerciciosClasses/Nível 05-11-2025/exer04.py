@@ -1,3 +1,7 @@
+# 4. Crie uma classe para representar um numero complexo. Implemente, usando sobrecarga ´
+# de operador, os metodos para fazer as operac¸ ´ oes de soma, subtrac¸ ˜ ao e produto entre ˜
+# dois numeros.
+
 import math
 
 

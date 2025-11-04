@@ -1,3 +1,6 @@
+# 6. Implemente uma classe para representar em vetor (x,y,z) no R3. Implemente os metodos ´
+# para calcular a soma, subtrac¸ao, produto vetorial, produto escalar e m ˜ odulo.
+
 from dataclasses import dataclass
 import math
 

@@ -1,3 +1,8 @@
+# 8. Crie uma classe que modele uma conta corrente
+# (a) Atributos: numero da conta, nome do correntista e saldo ´
+# (b) Metodos: alterar nome, dep ´ osito e saque; No construtor, saldo ´ e opcional, com valor ´
+# default zero e os demais atributos sao obrigat ˜ orios. 
+
 from dataclasses import dataclass
 
 

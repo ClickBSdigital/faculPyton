@@ -1,3 +1,7 @@
+# 5. Crie uma classe para representar um horario (hora, minuto e segundo). Implemente os ´
+# metodos para fazer as operac¸ ´ oes de incremento (de segundos) no hor ˜ ario e diferenc¸a ´
+# entre dois horarios.
+
 from dataclasses import dataclass
 
 

@@ -1,3 +1,9 @@
+# 7. Crie uma classe que modele um carro
+# (a) Atributos: marca, ano e prec¸o
+# (b) Metodos: mostrar prec¸o e de exibic¸ ´ ao dos dados ˜
+# Leia os dados de 5 carros e um valor p, Mostre as informac¸oes de todos os carros com ˜
+# prec¸o menor que p.
+
 from dataclasses import dataclass
 from typing import List
 

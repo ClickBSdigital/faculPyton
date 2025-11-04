@@ -1,3 +1,7 @@
+# 2. Crie uma classe que modele uma aluno
+# (a) Atributos: nome, numero de matr ´ ´ıcula e curso
+# (b) Metodos: mostrar curso e alterar curso
+
 from dataclasses import dataclass
 
 
