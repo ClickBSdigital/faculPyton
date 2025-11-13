@@ -954,7 +954,7 @@ def excluir_funcionario(func):
 # ===== FUNÇÃO PRINCIPAL =====
 def main():
     """Função principal do sistema"""
-    print("🚗 BEM-VINDO AO SISTEMA PERKAL - MECÂNICA 🛠️")
+    print("========== BEM-VINDO AO SISTEMA PERKAL - MECÂNICA===========")
     
     while True:
         opcao_principal = menu_principal()

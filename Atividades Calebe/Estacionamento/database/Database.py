@@ -150,6 +150,8 @@ class Database:
         finally:
             if 'conexao' in locals():
                 conexao.close()
+                
+    
 
     def verificar_placa_existe(self, placa):
         """
@@ -164,6 +166,30 @@ class Database:
         query = "SELECT id_vei FROM veiculos WHERE placa = ?"
         resultado = self.buscar_um(query, (placa,))
         return resultado is not None
+    
+    def __init__(self, vagas_totais=10):
+        self.vagas_totais = vagas_totais
+        self.veiculos_estacionados = []  # lista de objetos Veiculo
+        self.veiculos_saida = []          # histórico de saídas
+        
+    def adicionar_veiculo(self, veiculo):
+        if len(self.veiculos_estacionados) >= self.vagas_totais:
+            print("🚫 Estacionamento LOTADO! Não é possível adicionar mais veículos.")
+            return False
+        self.veiculos_estacionados.append(veiculo)
+        print(f"✅ {veiculo.placa} estacionado com sucesso.")
+        return True
+    
+    def remover_veiculo(self, placa):
+        for v in self.veiculos_estacionados:
+        if v.placa == placa:
+            self.veiculos_estacionados.remove(v)
+            self.veiculos_saida.append(v)
+            print(f"🚗 {placa} saiu do estacionamento.")
+            return True
+        print("⚠️ Veículo não encontrado.")
+        return False
+
 
 # Teste simples da classe
 if __name__ == "__main__":

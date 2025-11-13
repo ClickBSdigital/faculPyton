@@ -11,6 +11,7 @@ Sistema para controle de entrada e saída de veículos em estacionamento
 import os
 import sys
 from datetime import datetime
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 # Importa as classes do sistema
 from database.database import Database

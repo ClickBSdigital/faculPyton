@@ -14,6 +14,15 @@ class Veiculo:
             db: Instância da classe Database para operações no banco
         """
         self.db = db
+        
+        
+    def __init__(self, modelo, placa):
+        self.modelo = modelo
+        self.placa = placa
+
+    def __str__(self):
+        return f"{self.modelo} ({self.placa})"
+
     
     def cadastrar(self):
         """Cadastra um novo veículo no sistema"""
@@ -272,6 +281,8 @@ class Veiculo:
                 
         except Exception as erro:
             print(f"❌ Erro ao listar veículos estacionados: {erro}")
+            
+    
 
 # Teste da classe
 if __name__ == "__main__":
