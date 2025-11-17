@@ -11,6 +11,7 @@ ________________________________________|_______________|_______________________
 |Vanessa de Almeida Martins	            |7590686	    | Desenvolvedor Front-end |
 |Yan Torres Martins                     |53546866	    | Documentação e Testes   |
 |Carlos hagamenon Oliveira gomes        |48286226       | Documentação e Testes   |
+|Arthur Santoro Gomes                   |54098216       | Documentação e Testes   |
 |_______________________________________|_______________|_________________________|
 
 
