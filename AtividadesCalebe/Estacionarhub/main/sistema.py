@@ -42,9 +42,10 @@ def exibir_menu_principal():
     print("8. ⚙️   Configurar vagas")
     print("9. 💰  Configurar valores")
     print("10. 💵 Relatório financeiro")
-    print("11. 👥  Gerenciar usuários")  # NOVO
-    print("12. 💼 Status do caixa")  # NOVO
-    print("13. 🔄 Fechar turno")  # NOVO
+    print("11. 👥  Gerenciar usuários")
+    print("12. 💼 Status do caixa")
+    print("13. 🆕 Abrir turno")  # NOVA OPÇÃO - ABRIR TURNO
+    print("14. 🔄 Fechar turno")  # OPÇÃO RENUMERADA
     print("0. 👋  Sair do sistema")
     print("=" * 50)
 
@@ -133,7 +134,7 @@ def exibir_status_sistema(veiculo):
             saldo = veiculo.db.get_saldo_turno(veiculo.turno_aberto[0])
             print(f"💼 TURNO: Aberto | Saldo: R$ {saldo:.2f}")
         else:
-            print("💼 TURNO: ❌ Fechado")
+            print("💼 TURNO: ❌ Fechado - Use a opção 13 para abrir")
 
     except Exception as e:
         print(f"❌  Erro ao carregar status: {e}")
@@ -169,9 +170,7 @@ def fazer_login(db, veiculo):
                 veiculo.set_turno_aberto(turno_aberto)
                 print(f"💼 Turno já está aberto desde {turno_aberto[2]}")
             else:
-                print(
-                    "💼 Nenhum turno aberto. Você precisa abrir um turno para operar."
-                )
+                print("💼 Nenhum turno aberto. Use a opção 13 para abrir um turno.")
 
             pausar()
             return True
@@ -288,17 +287,27 @@ def main():
                 veiculo.relatorio_financeiro()
                 pausar()
 
-            elif opcao == "11":  # NOVO - Gerenciar usuários
+            elif opcao == "11":  # Gerenciar usuários
                 limpar_tela()
                 veiculo.gerenciar_usuarios()
                 # Não pausa aqui porque o método já tem seu próprio loop
 
-            elif opcao == "12":  # NOVO - Status do caixa
+            elif opcao == "12":  # Status do caixa
                 limpar_tela()
                 veiculo.status_caixa()
                 pausar()
 
-            elif opcao == "13":  # NOVO - Fechar turno
+            elif opcao == "13":  # NOVO - Abrir turno
+                limpar_tela()
+                if veiculo.turno_aberto:
+                    print("❌ Já existe um turno aberto!")
+                    print(f"💼 Turno atual aberto desde: {veiculo.turno_aberto[2]}")
+                    print("⚠️  Feche o turno atual antes de abrir um novo.")
+                else:
+                    veiculo.abrir_turno()
+                pausar()
+
+            elif opcao == "14":  # Fechar turno (renumerado)
                 limpar_tela()
                 veiculo.fechar_turno()
                 pausar()

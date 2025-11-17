@@ -3,11 +3,18 @@
 Sistema completo para controle comercial de estacionamento, desenvolvido em Python com interface console e banco de dados SQLite. Implementa operações CRUD completas com sistema de cobrança por tempo, controle de usuários, turnos e caixa registradora, seguindo arquitetura modular e boas práticas de programação.
 
 👥 Grupo de Desenvolvimento
-Nome	Matrícula	Função Principal
-Eliandro Aparecido Elias da Silva	28986976	Desenvolvedor Full Stack
-[Nome do Colega 1]	[Matrícula]	Desenvolvedor Back-end
-[Nome do Colega 2]	[Matrícula]	Desenvolvedor Front-end
-[Nome do Colega 3]	[Matrícula]	Documentação e Testes
+___________________________________________________________________________________
+|Nome	                                |Matrícula	    | Função Principal        |
+________________________________________|_______________|_________________________|
+|Eliandro Aparecido Elias da Silva  	|28986976	    | Desenvolvedor Full Stack|
+|Jowilson Ribas Nunes                   |57441136	    | Desenvolvedor Back-end  |
+|Vanessa de Almeida Martins	            |7590686	    | Desenvolvedor Front-end |
+|Yan Torres Martins                     |53546866	    | Documentação e Testes   |
+|Carlos hagamenon Oliveira gomes        |48286226       | Documentação e Testes   |
+|_______________________________________|_______________|_________________________|
+
+
+
 🎓 Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 🏫 Instituição: Senac Hub Academy
 👨‍🏫 Professor: Calebe
@@ -24,13 +31,15 @@ Eliandro Aparecido Elias da Silva	28986976	Desenvolvedor Full Stack
 📊 Gerenciamento de Usuários - Criação e ativação/desativação
 
 💼 Sistema de Turnos e Caixa
-🔄 Controle de Turnos - Abertura e fechamento com auditoria
+🆕 Abrir Turno - Início de jornada com saldo inicial configurável
+
+🔄 Fechar Turno - Encerramento com relatório completo e saldo final
 
 💰 Caixa Registradora - Saldo em tempo real e movimentações
 
 📈 Relatórios por Turno - Vendas, saldo e operações
 
-💵 Sangrias e Entradas - Controle completo do fluxo de caixa
+💵 Controle de Fluxo - Sangrias e entradas registradas
 
 ✅ Operações Principais (CRUD)
 🚗 Cadastrar Veículo - Registro completo com auditoria de usuário
@@ -197,8 +206,8 @@ Senha: admin123
 
 2. 💼 Fluxo de Trabalho Diário
 text
-1. 🔐 LOGIN → 2. 💼 ABRIR TURNO → 3. 🚗 OPERAR → 4. 💼 FECHAR TURNO → 5. 👋 SAIR
-3. 📋 Menu Principal
+1. 🔐 LOGIN → 2. 🆕 ABRIR TURNO → 3. 🚗 OPERAR → 4. 🔄 FECHAR TURNO → 5. 👋 SAIR
+3. 📋 Menu Principal Atualizado
 text
 SISTEMA DE GERENCIAMENTO DE VEÍCULOS
 ==================================================
@@ -214,10 +223,20 @@ SISTEMA DE GERENCIAMENTO DE VEÍCULOS
 10. 💵 Relatório financeiro
 11. 👥  Gerenciar usuários
 12. 💼 Status do caixa
-13. 🔄 Fechar turno
+13. 🆕 Abrir turno          ← NOVA OPÇÃO
+14. 🔄 Fechar turno         ← OPÇÃO RENUMERADA
 0. 👋  Sair do sistema
 ==================================================
-4. 💰 Sistema de Cobrança
+4. 🆕 Como Abrir um Turno
+Selecione a opção 13 no menu principal
+
+Informe o saldo inicial (sugerido: R$ 100,00)
+
+Confirme a abertura do turno
+
+Agora pode operar - cadastrar veículos e registrar saídas
+
+5. 💰 Sistema de Cobrança
 Exemplo de Cálculo:
 
 text
@@ -225,7 +244,7 @@ text
 🎁 Tolerância: 15 minutos
 ⏱️ Tempo cobrado: 2 horas e 15 minutos
 💰 Cálculo: 1ª hora (R$ 10,00) + 2 horas extras (R$ 4,00) = R$ 14,00
-5. 👑 Perfis de Usuário
+6. 👑 Perfis de Usuário
 👑 Admin: Acesso total ao sistema
 
 👨‍💼 Gerente: Relatórios e configurações básicas
@@ -239,6 +258,7 @@ ModuleNotFoundError	Dependências não instaladas	Verifique se Python está inst
 sqlite3.OperationalError	Banco corrompido	Delete veiculos.db para recriar
 Erro de login	Credenciais incorretas	Use admin/admin123 (primeiro acesso)
 UNIQUE constraint failed	Placa duplicada	Use outra placa ou edite a existente
+"Nenhum turno aberto"	Turno não iniciado	Use opção 13 para abrir turno
 🔍 Debug
 bash
 # Para debug, execute com verbose
@@ -298,7 +318,7 @@ Auditoria completa de operações
 
 💼 Gestão Comercial Profissional
 
-Controle de turnos com abertura/fechamento
+Controle completo de turnos (abertura e fechamento)
 
 Caixa registradora integrado
 
@@ -314,7 +334,7 @@ Acréscimos progressivos por uso
 
 🔄 Controle de Processos
 
-Fluxo de trabalho definido (Login → Turno → Operar → Fechar)
+Fluxo de trabalho definido (Login → Abrir Turno → Operar → Fechar Turno)
 
 Validações em todas as operações
 
@@ -421,7 +441,9 @@ Desenvolvido com 💙, ☕ e 🤝 pela nossa equipe
 ✅ Funcionalidades Implementadas:
 Sistema de Login seguro com perfis
 
-Controle de Turnos com abertura/fechamento
+🆕 Abrir Turno - Início controlado de jornada
+
+🔄 Fechar Turno - Encerramento com relatório
 
 Caixa Registradora integrado
 
@@ -478,10 +500,20 @@ Credenciais iniciais:
 
 🔒 Senha: admin123
 
+Fluxo obrigatório para operar:
+
+🔐 Login com credenciais válidas
+
+🆕 Abrir turno (opção 13) com saldo inicial
+
+🚗 Operar normalmente (cadastrar veículos, registrar saídas)
+
+🔄 Fechar turno (opção 14) ao final do expediente
+
 O sistema criará automaticamente o banco de dados e estará pronto para uso! 🎯
 
 <div align="center">
 ⭐ Se este projeto foi útil, deixe uma estrela no repositório!
-🚀 Pronto para transformar seu estacionamento em um negócio digital!
+🚀 Pronto para transformar seu estacionamento em um negócio digital profissional!
 
 </div>
