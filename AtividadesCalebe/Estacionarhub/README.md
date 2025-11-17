@@ -107,14 +107,14 @@ Estacionamento/
 🏗️ Arquitetura do Sistema
 text
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   CAMADA DE     │    │   CAMADA DE     │   │   CAMADA DE     │
-│  APRESENTAÇÃO   │◄──►│    NEGÓCIO      │◄──►│     DADOS      │
+│   CAMADA DE     │    │   CAMADA DE     │    │   CAMADA DE     │
+│  APRESENTAÇÃO   │◄──►│    NEGÓCIO      │◄──►│     DADOS       │
 │                 │    │                 │    │                 │
-│  main/sistema.py│    │ models/veiculo.py│    │ database/       │
-│     - Menu      │    │     - CRUD      │    │ database.py    │
-│     - Login     │    │  - Cálculos     │    │   - SQLite     │
-│     - Turnos    │    │  - Validações   │    │   - Usuários   │
-│     - Relatórios│    │  - Auditoria    │    │   - Turnos     │
+│  main/sistema.py│    │models/veiculo.py│    │ database/       │
+│     - Menu      │    │     - CRUD      │    │ database.py     │
+│     - Login     │    │  - Cálculos     │    │   - SQLite      │
+│     - Turnos    │    │  - Validações   │    │   - Usuários    │
+│     - Relatórios│    │  - Auditoria    │    │   - Turnos      │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ⚙️ Instalação e Configuração
 Pré-requisitos
